@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Employee from './components/Employee';
+// fetch friends from API
+
+// ajax call to https://randomuser.me/
+// store data
+const employeeArr = data;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Table>
+        {/* map over each employee to create table rows*/}
+        {employeeArr.map(employee => <Employee key={employee.id} details={employee} />)}
+      </Table>
     </div>
   );
 }
