@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import Employee from './components/Employee';
+import React, { Component } from 'react'
+import EmployeeRow from './components/EmployeeRow';
+import Table from './components/Table';
 // fetch friends from API
 
 // ajax call to https://randomuser.me/
@@ -9,15 +11,17 @@ import Employee from './components/Employee';
 // add hireDate key to each object
 const employeeArr = data;
 
-function App() {
-  return (
-    <div>
-      <Table>
-        {/* map over each employee to create table rows*/}
-        {employeeArr.map(employee => <Employee key={employee.id} details={employee} />)}
-      </Table>
-    </div>
-  );
+export class Employee extends Component {
+  render() {
+    return (
+      <div>
+        <Table>
+          {/* map over each employee to create table rows*/}
+          {employeeArr.map(employee => <EmployeeRow key={employee.id} details={employee} />)}
+        </Table>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default Employee
