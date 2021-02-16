@@ -1,11 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Employee extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+export default function Employee({details}) {
+  return (
+    <div>
+      <tr>
+        <td>{details.picture.thumbnail}</td>
+        <td>{details.name.first}</td>
+        <td>{details.name.last}</td>
+        <td>{details.email}</td>
+        <td>{details.login.username}</td>
+        <td>{details.phone}</td>
+        <td>{details.hireDate}</td>
+      </tr>
+    </div>
+  )
 }

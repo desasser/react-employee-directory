@@ -5,6 +5,8 @@ import Employee from './components/Employee';
 
 // ajax call to https://randomuser.me/
 // store data
+// calculate hire date
+// add hireDate key to each object
 const employeeArr = data;
 
 function App() {
