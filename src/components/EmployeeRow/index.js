@@ -11,7 +11,7 @@ export default function Employee({details}) {
         <td>{details.email}</td>
         <td>{details.login.username}</td>
         <td>{details.phone}</td>
-        <td>{details.hireDate}</td>
+        {/* <td>{details.hireDate}</td> */}
       </tr>
     </div>
   )

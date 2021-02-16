@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import React, { Component } from 'react'
 import EmployeeRow from './components/EmployeeRow';
 import Table from './components/Table';
