@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import EmployeeRow from './components/EmployeeRow';
 import Table from './components/Table';
 import Search from './components/Search';
+import Header from './components/Header';
 import API from './utils/API'
 
 export class Employee extends Component {
@@ -77,6 +78,7 @@ export class Employee extends Component {
   render() {
     return (
       <div>
+        <Header />
         <Search name="search" onChange={this.handleInputChange} value={this.state.search}/>
         <Table sortFirstName={this.sortEmployeesFirstName}>
           {/* map over each employee to create table rows*/}
