@@ -23,7 +23,7 @@ export class Employee extends Component {
       console.log(response.data.results);
       this.setState({
         users: response.data.results,
-        sortedUsers: response.data.results
+        sortedUsers: [...response.data.results]
       })
     })
   }
@@ -63,7 +63,7 @@ export class Employee extends Component {
         sortedUsers:beSorted,
         asc: true
       })
-      console.log('sorted', this.state.sortedUsers);
+      // console.log('sorted', this.state.sortedUsers);
     }
   }
 
@@ -75,7 +75,7 @@ export class Employee extends Component {
   clearFilters = () => {
     // console.log('current users array', this.state.users);
     // console.log('sortedusers', this.state.sortedUsers);
-    this.setState({sortedUsers:this.state.users})
+    this.setState({sortedUsers:[...this.state.users]})
   }
   
   handleInputChange = e => {
