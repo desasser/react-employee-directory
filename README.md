@@ -24,7 +24,7 @@ This project is an app for practice utilizing react.js library for building webs
 * [Questions](#questions)
 
 ## Screenshot
-<img src="note taker.JPG" alt="Note Taker App">
+<img src="landingPage.JPG" alt="Employee Directory App">
 
 
 ## Installation: 
