@@ -1,0 +1,19 @@
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.reset-button-style {
+  height: 50px;
+  width: 150px;
+  background-color: #918F90;
+  color: #F2F1F2;
+  border-radius: 0.25em;
+  font-size: 20px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}

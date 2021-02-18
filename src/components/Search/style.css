@@ -1,0 +1,11 @@
+.form-style {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.input-style {
+  font-size: 28px;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+}

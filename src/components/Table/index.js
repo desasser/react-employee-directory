@@ -7,7 +7,7 @@ export default function index(props) {
       <thead>
         <tr>
           <th> Picture </th>
-          <th onClick={props.sortFirstName} className="clickable"> First Name </th>
+          <th onClick={props.sortFirstName} className="clickable" style={{color:"#BB4430"}}> First Name </th>
           <th> Last Name </th>
           <th> Username </th>
           <th> Email </th>

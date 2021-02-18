@@ -4,6 +4,7 @@ import Table from './components/Table';
 import Search from './components/Search';
 import Header from './components/Header';
 import API from './utils/API'
+import ResetButton from './components/ResetButton';
 
 export class Employee extends Component {
   state = {
@@ -45,6 +46,7 @@ export class Employee extends Component {
         asc: false
       })
     } else {
+      console.log('users', this.state.users);
       const beSorted = this.state.sortedUsers.sort(function (a,b) {
         const valueA = a.name.first.toUpperCase();
         const valueB = b.name.first.toUpperCase();
@@ -56,10 +58,12 @@ export class Employee extends Component {
         }
           return 0
       })
+
       this.setState({
         sortedUsers:beSorted,
         asc: true
       })
+      console.log('sorted', this.state.sortedUsers);
     }
   }
 
@@ -68,6 +72,11 @@ export class Employee extends Component {
     this.setState({sortedUsers: filteredEmployees});
   }
 
+  clearFilters = () => {
+    // console.log('current users array', this.state.users);
+    // console.log('sortedusers', this.state.sortedUsers);
+    this.setState({sortedUsers:this.state.users})
+  }
   
   handleInputChange = e => {
     const {name,value} = e.target;
@@ -84,6 +93,7 @@ export class Employee extends Component {
           {/* map over each employee to create table rows*/}
           {this.state.sortedUsers.map(employee => <EmployeeRow key={employee.login.uuid} details={employee} />)}
         </Table>
+        <ResetButton onClick={this.clearFilters}/>
       </div>
     )
   }

@@ -4,7 +4,7 @@ import "./style.css";
 export default function Header() {
   return (
     <header>
-      <h1 className="header-text">Employee Directory</h1>
+      <p className="header-text">Employee Directory</p>
     </header>
   )
 }
